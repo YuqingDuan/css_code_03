@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>padding</title>
+	<style type="text/css">
+		.box{
+			padding-left: 20px;
+			padding-right: 30px;
+			padding-top: 100px;
+			padding-bottom: 50px;
+			width: 500px;
+			height: 300px;
+			background: red;
+		}
+
+		/*盒子的宽度 = 定义的宽度width + 边框的宽度border + 左右内边距padding*/
+		.box2{
+			/*(500-120)/2 = 190px, 发现盒子被撑大为 width=690px*/
+			padding-left: 190px;
+			/*所以要width-=190px*/
+			/*width: 500px;*/
+			width: 310px;
+			height: 300px;
+			background: green;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">盒子模型之内边距</div>
+
+	<!-- 内边距会撑大盒子, 图片大小为:120*58, 现在要让盒子里图片水平居中 -->
+	<!-- 继承的盒子(盒子里面套的盒子)水平方向(左右受限,上下不受限)不会被撑大 当内层盒子padding值大于外层盒子width时会突出, 但是父盒子依然不会被撑大-->
+	<div class="box2">
+		<img src="images/bg1.png">
+	</div>
+</body>
+</html>

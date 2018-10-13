@@ -1,0 +1,40 @@
+<!-- 文字默认大小是16px
+行高默认大小是18px
+行高 = dis(文字基线, 文字基线) = dis(文字上边线, 文字下边线)
+一行文字行高和父元素高度一致的时候, 文字垂直居中显示 -->
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>colorful navigation bar</title>
+	<style type="text/css">
+		a.one{
+			/*先把行内元素转化为行内块元素*/
+			display: inline-block;
+			/*设置a标签的宽和高*/
+			width: 120px;
+			height: 58px;
+			/*设置a标签内容的背景图片*/
+			background: url("images/bg1.png");
+			/*设置a标签的内容水平布局*/
+			text-align: center;
+			/*设置a标签内容无下划线*/
+			text-decoration: none;
+			/*设置a标签内容颜色*/
+			color: white;
+			/*一行文字行高和父元素高度一致的时候, 文字垂直居中显示(重要)(理解)*/
+			line-height: 58px;
+		}
+		/*设置a标签的链接伪类*/
+		a.one:hover{
+			background: url("images/bg2.png");
+		}
+	</style>
+</head>
+<body>
+	<a href="#" class="one">五彩导航</a>
+	<a href="#" class="two">五彩导航</a>
+	<a href="#" class="three">五彩导航</a>
+	<a href="#" class="four">五彩导航</a>
+</body>
+</html>

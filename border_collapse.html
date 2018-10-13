@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>border collapse</title>
+	<style type="text/css">
+		.father{
+			width: 498px;
+			height: 400px;
+			background: #232323;
+			/*border: 1px solid #232323;*/
+			overflow: hidden;
+		}
+		.son{
+			width: 200px;
+			height: 200px;
+			background: #eee;
+			/*让子盒子向下平移30px*/
+			margin-top: 30px;
+		}
+	</style>
+</head>
+<body>
+	<!-- 嵌套的盒子,直接给盒子设置垂直方向外边距的时候,会发生外边距塌陷. 解决方案1. 给父盒子设置边框 解决方案2. 给父盒子设置overflow -->
+	<div class="father">
+		<div class="son"></div>
+	</div>
+</body>
+</html>

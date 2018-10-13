@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>form</title>
+	<style type="text/css">
+		.username{
+			/*清空原有边框*/
+			border:0 none;
+			/*清空原有轮廓线*/
+			outline-style: none;
+
+			background: #ccc;
+			border: 1px dashed green;
+		}
+		.username:focus{
+			background: red;
+		}
+		.email{
+			/*清空原有边框*/
+			border:0 none;
+			/*清空原有轮廓线*/
+			outline-style: none;
+
+			border-bottom: 1px dotted red;
+		}
+		.search{
+			/*清空原有边框*/
+			border:0 none;
+			/*清空原有轮廓线*/
+			outline-style: none;
+
+			border: 1px solid #999;
+			background: url("images/search.png") no-repeat right;
+		}
+	</style>
+</head>
+<body>
+	<!-- <label for="ID"></label> 获取焦点-->
+	<label for="un">Username: </label><input type="text" class="username" id="un"><br><br>
+	Email: <input type="text" class="email"><br><br>
+	Search: <input type="text" class="search">
+</body>
+</html>
